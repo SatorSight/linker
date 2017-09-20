@@ -1,0 +1,556 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|Lato:100,300,400);
+/* ###############################  */
+/*  Sudhanshu Pandey   */
+/* #############################  */
+/* line 10, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+html {
+  height: 100%;
+}
+
+/* line 13,  */
+/* line 15, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+body {
+  background: url(http://www.streetindustry.co/assets/img/backgrounds/1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@media (min-width: 979px) {
+  /* line 13,  */
+  /* line 24, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+  body {
+    padding-top: 80px;
+  }
+}
+/* line 21,  */
+/* line 30, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.blue {
+  color: #447fc8;
+}
+
+/* line 25,  */
+/* line 35, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.btn-black {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 5px 20px;
+  background-color: #222222;
+  background-image: none;
+  color: white;
+  text-shadow: none;
+}
+
+/* line 33,  */
+/* line 46, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.btn-black:hover {
+  background: #333333;
+  color: white;
+}
+
+/* ########### */
+/* $NAVIGATION */
+/* ########### */
+/* line 43,  */
+/* line 55, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.navbar .brand {
+  margin-top: 20px;
+  padding-bottom: 8px;
+  max-height: 40px;
+  width: auto;
+}
+
+/* line 49,  */
+/* line 62, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.navbar .navbar-inner {
+  height: 80px;
+  background: white;
+  filter: none;
+}
+
+/* line 54,  */
+/* line 68, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.navbar .nav {
+  margin-top: 20px;
+}
+
+/* line 56,  */
+/* line 72, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.navbar .nav > li > a {
+  padding: 10px 10px 11px;
+  color: #333;
+  text-shadow: none;
+}
+
+/* line 63,  */
+/* line 78, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.navbar .nav > li > a:hover {
+  color: #111;
+}
+
+/* line 67,  */
+/* line 82, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.navbar .nav > li.active > a {
+  background: none;
+  color: #111;
+}
+
+/* line 70,  */
+/* line 87, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.navbar .nav > li.active > a:hover {
+  background: none;
+  color: #111;
+}
+
+/* ####### */
+/* $LOGIN  */
+/* ####### */
+/* line 80,  */
+/* line 96, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#login-wraper {
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -185px;
+  margin-left: -235px;
+  padding: 25px;
+  width: 700px;
+  height: 350px;
+  background: white;
+  text-align: center;
+}
+
+/* line 97,  */
+/* line 113, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.login-form legend {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+}
+
+/* line 102,  */
+/* line 119, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.login-form .body {
+  /*padding-bottom: 30px;*/
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* line 106,  */
+/* line 124, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.login-form .footer {
+  margin-top: 10px;
+}
+
+/* line 108,  */
+/* line 128, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.login-form .footer .checkbox.inline {
+  display: inline;
+}
+
+/* line 110,  */
+/* line 132, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.login-form .footer .checkbox.inline input[type="checkbox"] {
+  float: none;
+  margin-top: -4px;
+}
+
+/* line 115,  */
+/* line 137, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.login-form .footer .btn {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  margin-left: 15px;
+  padding: 7px 25px;
+  background-image: none;
+}
+
+/* ######### */
+/* $REGISTER */
+/* ######### */
+/* line 127,  */
+/* line 150, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-wraper {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  margin-top: 25px;
+  margin-bottom: 70px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: white;
+  text-align: center;
+}
+
+/* line 137,  */
+/* line 168, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-form {
+  margin: 0 auto;
+  width: 350px;
+}
+
+/* line 140,  */
+/* line 173, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-form .control-inline {
+  display: inline-block;
+}
+
+/* line 143,  */
+/* line 177, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-form legend {
+  margin-bottom: 15px;
+  border-bottom: none;
+}
+
+/* line 147,  */
+/* line 182, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-form input.input-huge {
+  width: 318px;
+}
+
+/* line 150,  */
+/* line 186, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-form .control-group {
+  margin-bottom: 0;
+}
+
+/* line 153,  */
+/* line 190, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-form .checkbox.inline {
+  margin-bottom: 10px;
+  padding: 0;
+  font-size: 98%;
+}
+
+/* line 157,  */
+/* line 196, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-form .checkbox.inline input {
+  margin-right: 10px;
+}
+
+/* line 161,  */
+/* line 200, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-form .body {
+  overflow-y: auto;
+  height: auto;
+}
+
+/* line 165,  */
+/* line 205, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-form .btn {
+  padding: 10px 40px;
+  background-image: none;
+  box-shadow: none;
+}
+
+/* line 171,  */
+/* line 212, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.register-info-wraper {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* line 174,  */
+/* line 217, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-info {
+  position: relative;
+  padding: 25px;
+}
+
+/* line 177,  */
+/* line 222, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-info ul {
+  margin-right: 25px;
+}
+
+/* line 179,  */
+/* line 226, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-info ul li {
+  margin-bottom: 25px;
+}
+
+/* ####### */
+/* $FOOTER */
+/* ####### */
+/* line 185,  */
+/* line 234, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+footer.white {
+  padding-top: 20px;
+  height: 50px;
+  background: white;
+  text-align: center;
+}
+
+/* ###### */
+/* $FONTS */
+/* ###### */
+/* navigation */
+/* line 7,  */
+/* line 246, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.navbar {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* login form */
+/* line 17,  */
+/* line 256, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.login-form legend {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: #333333;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* line 24,  */
+/* line 265, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+.login-form label {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 20px;
+  color: #333333;
+  font-weight: 300;
+}
+
+/* register form */
+/* line 32,  */
+/* line 274, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-form legend {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: #333333;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* line 39,  */
+/* line 282, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-form label {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 18px;
+  color: #333333;
+  font-weight: 300;
+}
+
+/* register info */
+/* line 48,  */
+/* line 291, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-info h1 {
+  font-size: 42px;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  line-height: 55px;
+  font-weight: 700;
+  text-align: right;
+  padding-bottom: 50px;
+  color: white;
+}
+
+/* line 57,  */
+/* line 301, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+#register-info ul {
+  text-align: right;
+  color: white;
+  font-size: 24px;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+/* footer */
+/* line 66,  */
+/* line 310, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+footer.navbar-fixed-bottom {
+  font-size: 16px;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+/* ######## */
+/* $QUERIES */
+/* ######## */
+/* Portrait tablet*/
+@media (max-width: 980px) {
+  /* logo margin fix */
+  /* line 8,  */
+  /* line 324, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+  .navbar {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  /* line 9,  */
+  /* line 329, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+  .navbar .brand {
+    margin-top: 0;
+  }
+
+  /* line 14,  */
+  /* line 333, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+  .navbar .navbar-inner {
+    height: auto;
+  }
+
+  /* line 18,  */
+  /* line 338, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+  .navbar .nav > li > a:hover {
+    color: white;
+  }
+
+  /* line 21,  */
+  /* line 343, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+  #login-wraper {
+    position: relative;
+    top: 0;
+    margin-top: 25px;
+  }
+}
+@media (max-width: 495px) {
+  /* line 29,  */
+  /* line 351, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+  #login-wraper {
+    width: auto;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    left: 0;
+  }
+
+  /* line 36,  */
+  /* line 360, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+  #register-form {
+    width: auto;
+  }
+
+  /* line 38,  */
+  /* line 364, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+  #register-form .control-inline {
+    display: block;
+  }
+
+  /* line 41,  */
+  /* line 368, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+  #register-form input {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* line 44,  */
+  /* line 373, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+  #register-form input.input-huge, #register-form input.input-medium {
+    width: auto;
+    display: block;
+  }
+
+  /* line 49,  */
+  /* line 378, /var/www/urls/urls/app/assets/stylesheets/login.scss */
+  #register-form .btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+
+ */
+
+
+
+
+
+.admin-wrapper h2:first-child{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.admin-wrapper .jumbotron h3{
+    margin-top: 10px;
+}
+
+.affix {
+    top: 20px;
+}
+
+.admin-wrapper{
+	font-size: 16px;
+}
+
+.admin-container{
+	word-wrap: break-word;
+}
+
+#admin-terminal{
+    padding: 11px;
+    padding-top: 0;
+    color: #df1aff;
+    top: 4px;
+
+    position: relative;
+    display: inline-block;
+}
+
+@-webkit-keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+.form-inline .group-input .link-input{
+    width: 100%;
+}
+
+.group-input{
+	width: 94%;
+}
+
+.header-all{
+	padding-top: 18px;
+	padding-bottom: 18px;
+	background:#333;
+	font-family: monospace;
+}
+
+#login-wraper .error-alert{
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: -25px;
+}
+.rails-bootstrap-forms-date-select select,
+.rails-bootstrap-forms-time-select select,
+.rails-bootstrap-forms-datetime-select select {
+  display: inline-block;
+  width: auto;
+}
+
+.rails-bootstrap-forms-error-summary {
+  margin-top: 10px;
+}

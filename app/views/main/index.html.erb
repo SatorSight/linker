@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <title>Linker</title>
+</head>
+<body>
+<div class="container" id="admin-container">
+    <div class="jumbotron header-all">
+        <div class="media">
+            <div class="media-left">
+            </div>
+            <div class="media-body">
+                <h2 id="admin-terminal"> < a /> Linker</h2>
+            </div>
+        </div>
+    </div>
+    <ul class="nav nav-pills">
+	  <li <% if params[:mine] == 'no' or !params[:mine].present? %>class="active"<% end %>>
+	  	<a href="?mine=no">All</a>
+	  </li>
+	  <li <% if params[:mine] == 'yes' %>class="active"<% end %>>
+	    <a href="?mine=yes">Mine</a>
+	  </li>
+	</ul>
+	<br>
+
+	<select id="category-changer" class="form-control">
+		<% @categories.each do |category| %>
+			<option value="<%= category.id %>" <% if @categories.first == category %>selected<% end %>>
+				<%= category.title %>
+			</option>
+		<% end %>
+	</select>
+
+    <ul class="nav nav-tabs not-here">
+    	<% @categories.each do |category| %>
+			<li <% if @categories.first == category %>class="active"<% end %>><a data-toggle="tab" id="tabber-<%= category.id %>" href="#<%= category.id %>"><%= category.title %></a></li>
+		<% end %>
+	</ul>
+
+	<% zone = ActiveSupport::TimeZone.new 'Moscow' %>
+
+	<div class="col-xs-12 admin-wrapper">
+		<div class="tab-content">
+			<% @categories.each do |category| %>
+				<div id="<%= category.id %>" class="tab-pane <% if @categories.first == category %>active<% end %>">
+						<% 
+						input_class = 'link-input';
+						form_group_class = 'form-inline ';
+						form_group_class += 'has-error' if params[:error] == 'yes'
+						%>
+
+						<%= bootstrap_form_for Link.new, :html => { class: form_group_class } do |f| %>
+						  <%= f.text_field :value, hide_label: true, class: input_class,  wrapper: { class: 'group-input' } %>
+						  <%= f.hidden_field :user_id, value: session[:user] %>
+					      <%= f.hidden_field :category_id, value: category.id %>
+					      <input name="mine" type="hidden" value="<%= params[:mine] %>">
+						  <%= f.submit 'Add', id: :add_button %>
+						<% end %>
+					<table class="table table-condensed table-striped table-hover">
+						<tbody>
+							<% category.links.each do |link| 
+								if link.user.id == session[:user] or params[:mine] == 'no' or !params[:mine].present?  %>
+									<% time = link.created_at.in_time_zone zone
+									time = time.strftime("%Y-%m-%d %H:%M:%S") %>
+									<tr>
+										<td><a href="<%= link.value %>" target="_blank"><%= link.value %></a></td>
+										<td><%= time %></td>
+										<td><%= link.user.login %></td>
+										<td><%= link.category.title %></td>
+									</tr>
+							    <% end 
+							end %>
+						</tbody>
+					</table>
+				</div>
+			<% end %>
+    	</div>
+	</div>
+	<br>
+	<br>
+</body>
+</html>
