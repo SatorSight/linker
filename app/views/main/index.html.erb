@@ -61,18 +61,44 @@
 						<% end %>
 					<table class="table table-condensed table-striped table-hover">
 						<tbody>
-							<% category.links.each do |link| 
-								if link.user.id == session[:user] or params[:mine] == 'no' or !params[:mine].present?  %>
-									<% time = link.created_at.in_time_zone zone
-									time = time.strftime("%Y-%m-%d %H:%M:%S") %>
-									<tr>
-										<td><a href="<%= link.value %>" target="_blank"><%= link.value %></a></td>
-										<td><%= time %></td>
-										<td><%= link.user.login %></td>
-										<td><%= link.category.title %></td>
-									</tr>
-							    <% end 
-							end %>
+
+							<% if category.title == 'All' %>
+								<% @all_links.each do |link| 
+									if link.user.id == session[:user] or params[:mine] == 'no' or !params[:mine].present?  %>
+										<% time = link.created_at.in_time_zone zone
+										time = time.strftime("%Y-%m-%d %H:%M:%S") %>
+										<tr>
+											<td><a href="//<%= link.value %>" target="_blank"><%= link.value %></a></td>
+											<td><%= time %></td>
+											<td><%= link.user.login %></td>
+											<td><%= link.category.title %></td>
+										</tr>
+								    <% end 
+								end %>
+
+							<% else %>
+
+								<% category.links.each do |link| 
+									if link.user.id == session[:user] or params[:mine] == 'no' or !params[:mine].present?  %>
+										<% time = link.created_at.in_time_zone zone
+										time = time.strftime("%Y-%m-%d %H:%M:%S") %>
+										<tr>
+											<td><a href="//<%= link.value %>" target="_blank"><%= link.value %></a></td>
+											<td><%= time %></td>
+											<td><%= link.user.login %></td>
+											<td><%= link.category.title %></td>
+										</tr>
+								    <% end 
+								end %>
+
+							<% end %>
+
+
+							
+
+
+
+
 						</tbody>
 					</table>
 				</div>

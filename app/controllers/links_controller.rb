@@ -6,6 +6,17 @@ class LinksController < ApplicationController
   	redirect_path[:mine] = params[:mine] if params[:mine].present?
 
   	if value_not_empty?
+
+		link = params[:link][:value]
+		if link.include? 'http'
+			link.sub! 'https', ''
+			link.sub! 'http', ''
+			link.sub! '://', ''
+			params[:link][:value] = link
+		end
+
+		pp link
+
 	  	@link = Link.new link_params
 	  	if @link.save
 	  	  redirect_to redirect_path
