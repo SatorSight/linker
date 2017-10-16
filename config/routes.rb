@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 	root 'login#index'
 
 	get '/links', to: 'main#index'
+	get '/logout', to: 'login#logout'
 
 	post '/login', to: 'login#login'
 

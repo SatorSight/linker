@@ -16,14 +16,23 @@
             </div>
         </div>
     </div>
-    <ul class="nav nav-pills">
-	  <li <% if params[:mine] == 'no' or !params[:mine].present? %>class="active"<% end %>>
-	  	<a href="?mine=no">All</a>
-	  </li>
-	  <li <% if params[:mine] == 'yes' %>class="active"<% end %>>
-	    <a href="?mine=yes">Mine</a>
-	  </li>
-	</ul>
+    <div class="row">
+    	<div class="col-xs-6">
+		    <ul class="nav nav-pills">
+			  <li <% if params[:mine] == 'no' or !params[:mine].present? %>class="active"<% end %>>
+			  	<a href="?mine=no">All</a>
+			  </li>
+			  <li <% if params[:mine] == 'yes' %>class="active"<% end %>>
+			    <a href="?mine=yes">Mine</a>
+			  </li>
+			</ul>
+		</div>
+		<div class="col-xs-6 pull-right">
+			<form action="/logout" method="get">
+				<button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span> Log out</button>
+			</form>
+		</div>
+	</div>
 	<br>
 
 	<select id="category-changer" class="form-control">
@@ -51,7 +60,6 @@
 						form_group_class = 'form-inline ';
 						form_group_class += 'has-error' if params[:error] == 'yes'
 						%>
-
 						<%= bootstrap_form_for Link.new, :html => { class: form_group_class } do |f| %>
 						  <%= f.text_field :value, hide_label: true, class: input_class,  wrapper: { class: 'group-input' } %>
 						  <%= f.hidden_field :user_id, value: session[:user] %>
@@ -61,7 +69,6 @@
 						<% end %>
 					<table class="table table-condensed table-striped table-hover">
 						<tbody>
-
 							<% if category.title == 'All' %>
 								<% @all_links.each do |link| 
 									if link.user.id == session[:user] or params[:mine] == 'no' or !params[:mine].present?  %>
@@ -87,9 +94,7 @@
 										</tr>
 								    <% end 
 								end %>
-
 							<% else %>
-
 								<% category.links.each do |link| 
 									if link.user.id == session[:user] or params[:mine] == 'no' or !params[:mine].present?  %>
 										<% time = link.created_at.in_time_zone zone
@@ -111,17 +116,9 @@
 											    <a href="//<%= link.value %>" target="_blank" class="mask"></a>
                                             </td>
 										</tr>
-								    <% end 
+								    <% end 	
 								end %>
-
 							<% end %>
-
-
-							
-
-
-
-
 						</tbody>
 					</table>
 				</div>
