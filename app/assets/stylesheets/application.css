@@ -33,6 +33,7 @@
 
 .admin-wrapper{
 	font-size: 16px;
+    padding: 0;
 }
 
 .admin-container{
@@ -63,7 +64,7 @@
 
 .form-inline .group-input .link-input{
     width: 98%;
-    margin: 10px;
+    margin: 10px 10px 10px 0;
 }
 
 .group-input{
@@ -75,7 +76,6 @@
     padding-bottom: 0;
 	background:#333;
 	font-family: monospace;
-	background: #333;
 }
 
 #login-wraper .error-alert{
@@ -85,13 +85,24 @@
     margin-top: -25px;
 }
 
-#admin-container .tab-pane{
-	padding: 10px;
-}
-
 .not-here{
 	opacity: 0;
     position: absolute;
     z-index: -100000;
     left: -99999px;
 }
+.table-condensed tr,.table-condensed tr td {position: relative; overflow-wrap: break-word;}
+.table-condensed tr a.mask {position: absolute; left: 0; top: 0; width: 100%; height: 100%; border-bottom: 1px solid rgba(0,0,0,0.2);}
+tr.eugene {background-color: #FFF6B1 !important;}
+/*tr.eugene {background-color: #ffe200 !important;}*/
+tr.roman {background-color: #D8E6F4 !important;}
+tr.mila {background-color: #E4F38C !important;}
+tr.mikhail {background-color: #D7CBDE !important;}
+tr.ivan {background-color: #B6E3D9 !important;}
+#new_link {width: 100%; overflow: hidden; position: relative;}
+#new_link .group-input {margin-right: 60px; display: block; width: auto;}
+#new_link #add_button {position: absolute; right: 0; top: 10px;}
+@media (min-width: 440px) and (max-width: 530px) {.table-condensed {font-size: 13px;} .table-condensed tr td:first-child {max-width: 300px;}}
+@media (min-width: 380px) and (max-width: 440px) {.table-condensed {font-size: 11px;} .table-condensed tr td:first-child {max-width: 230px;}}
+@media (min-width: 350px) and (max-width: 380px) {.table-condensed {font-size: 10px;} #admin-terminal {font-size: 18px;} .table-condensed tr td:first-child {max-width: 180px;}}
+@media (max-width: 350px) {.table-condensed {font-size: 10px;} #admin-terminal {font-size: 18px;} .container {padding: 0 10px;}  .table-condensed tr td:first-child {max-width: 150px;} .table-condensed > thead > tr > th, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > td {padding: 0 2px;}}

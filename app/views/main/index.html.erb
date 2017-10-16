@@ -67,11 +67,23 @@
 									if link.user.id == session[:user] or params[:mine] == 'no' or !params[:mine].present?  %>
 										<% time = link.created_at.in_time_zone zone
 										time = time.strftime("%Y-%m-%d %H:%M:%S") %>
-										<tr>
-											<td><a href="//<%= link.value %>" target="_blank"><%= link.value %></a></td>
-											<td><%= time %></td>
-											<td><%= link.user.login %></td>
-											<td><%= link.category.title %></td>
+										<tr class="<%= link.user.login %>">
+											<td>
+											    <a href="//<%= link.value %>" target="_blank"><%= link.value %></a>
+											    <a href="//<%= link.value %>" target="_blank" class="mask"></a>
+                                            </td>
+											<td>
+											    <%= time %>
+											    <a href="//<%= link.value %>" target="_blank" class="mask"></a>
+											</td>
+											<td>
+											    <%= link.user.login %>
+											    <a href="//<%= link.value %>" target="_blank" class="mask"></a>
+											</td>
+											<td>
+											    <%= link.category.title %>
+											    <a href="//<%= link.value %>" target="_blank" class="mask"></a>
+											</td>
 										</tr>
 								    <% end 
 								end %>
@@ -82,11 +94,22 @@
 									if link.user.id == session[:user] or params[:mine] == 'no' or !params[:mine].present?  %>
 										<% time = link.created_at.in_time_zone zone
 										time = time.strftime("%Y-%m-%d %H:%M:%S") %>
-										<tr>
-											<td><a href="//<%= link.value %>" target="_blank"><%= link.value %></a></td>
-											<td><%= time %></td>
-											<td><%= link.user.login %></td>
-											<td><%= link.category.title %></td>
+										<tr class="<%= link.user.login %>">
+											<td>
+											    <a href="//<%= link.value %>" target="_blank"><%= link.value %></a>
+                                            </td>
+											<td>
+											    <%= time %>
+											    <a href="//<%= link.value %>" target="_blank" class="mask"></a>
+                                            </td>
+											<td>
+											    <%= link.user.login %>
+											    <a href="//<%= link.value %>" target="_blank" class="mask"></a>
+                                            </td>
+											<td>
+											    <%= link.category.title %>
+											    <a href="//<%= link.value %>" target="_blank" class="mask"></a>
+                                            </td>
 										</tr>
 								    <% end 
 								end %>
