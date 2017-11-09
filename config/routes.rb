@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
 	get '/links', to: 'main#index'
 	get '/logout', to: 'login#logout'
+	get '/detail/:id', to: 'links#detail'
 
 	post '/login', to: 'login#login'
 

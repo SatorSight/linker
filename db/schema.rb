@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170919103319) do
+ActiveRecord::Schema.define(version: 20171109083755) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "title"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20170919103319) do
     t.datetime "updated_at", null: false
     t.bigint "category_id"
     t.bigint "user_id"
+    t.text "comment"
     t.index ["category_id"], name: "index_links_on_category_id"
     t.index ["user_id"], name: "index_links_on_user_id"
   end

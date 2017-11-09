@@ -10,10 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery3
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-//= require jquery3
 //= require twitter/bootstrap
 
 
@@ -30,21 +30,46 @@ $(document).on('turbolinks:load', function() {
         var lastTab = localStorage.getItem('lastTab');
         if (lastTab) {
             $('[href="' + lastTab + '"]').tab('show');
-
             id = lastTab.replace('#', '');
-
-            console.log(lastTab);
-            console.log(id);
-
             $("#category-changer").val(id);
-
         }
     });
 
     $(document).ready(function(){
+
+        $('[data-toggle="popover"]').popover(); 
+
+        var modal = document.getElementById('myModal');
+        var span = document.getElementsByClassName("close")[0];
+        var modal_content = document.getElementsByClassName("modal-content")[0];
+
         $('#category-changer').on('change', function(){
             $('#tabber-'+$(this).val()).tab('show');
         });
+
+        $('.show_modal').on('click', function(){
+            let id = $(this).attr('data-id');
+            fetch('/detail/'+id)
+                .then(function(resp){
+                    return resp.text();
+                })
+                .then(function(content){
+                   modal_content.innerHTML = content;
+                }).then(function(content){
+                   modal.style.display = "block";
+                });
+        });
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
     });  
 
 });

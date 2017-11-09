@@ -106,3 +106,56 @@ tr.ivan {background-color: #B6E3D9 !important;}
 @media (min-width: 380px) and (max-width: 440px) {.table-condensed {font-size: 11px;} .table-condensed tr td:first-child {max-width: 230px;}}
 @media (min-width: 350px) and (max-width: 380px) {.table-condensed {font-size: 10px;} #admin-terminal {font-size: 18px;} .table-condensed tr td:first-child {max-width: 180px;}}
 @media (max-width: 350px) {.table-condensed {font-size: 10px;} #admin-terminal {font-size: 18px;} .container {padding: 0 10px;}  .table-condensed tr td:first-child {max-width: 150px;} .table-condensed > thead > tr > th, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > td {padding: 0 2px;}}
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.red{
+    color: red;
+}
+
+#current_user_id{
+    display: none;
+}

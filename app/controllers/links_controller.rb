@@ -1,4 +1,5 @@
 class LinksController < ApplicationController
+  skip_before_action :verify_authenticity_token
 
   def create
 
@@ -14,8 +15,6 @@ class LinksController < ApplicationController
 			link.sub! '://', ''
 			params[:link][:value] = link
 		end
-
-		pp link
 
 	  	@link = Link.new link_params
 	  	if @link.save
@@ -35,7 +34,25 @@ class LinksController < ApplicationController
   def destroy
   	@link = Link.find params[:id]
   	@link.destroy
+
+    redirect_path = { controller: 'main', action: 'index' }
+    redirect_to redirect_path
   end
+
+  def detail
+    @link = Link.find params[:id]
+
+    render :layout => false
+  end
+
+  def update
+    @link = Link.find(params[:id])
+    @link.update_attributes(user_params)
+
+    redirect_path = { controller: 'main', action: 'index' }
+    redirect_to redirect_path
+  end
+
 
 private
 
@@ -46,5 +63,10 @@ private
   def value_not_empty?
   	params[:link][:value].present?
   end
+
+  def user_params
+    params[:link].permit(:value, :comment)
+  end
+
 
 end
